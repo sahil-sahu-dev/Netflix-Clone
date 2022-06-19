@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B23BB400285EEEF4005172D2 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BB3FF285EEEF4005172D2 /* CollectionViewTableViewCell.swift */; };
 		B28356ED285E2D40009E9604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28356EC285E2D40009E9604 /* AppDelegate.swift */; };
 		B28356EF285E2D40009E9604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28356EE285E2D40009E9604 /* SceneDelegate.swift */; };
 		B28356F1285E2D40009E9604 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28356F0285E2D40009E9604 /* MainTabBarViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B23BB3FF285EEEF4005172D2 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		B28356E9285E2D40009E9604 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28356EC285E2D40009E9604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B28356EE285E2D40009E9604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				B2835703285E2F19009E9604 /* UpcomingViewController.swift */,
 				B2835705285E2F2F009E9604 /* SearchViewController.swift */,
 				B2835707285E2F3F009E9604 /* DownloadsViewController.swift */,
+				B23BB3FF285EEEF4005172D2 /* CollectionViewTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2835706285E2F2F009E9604 /* SearchViewController.swift in Sources */,
+				B23BB400285EEEF4005172D2 /* CollectionViewTableViewCell.swift in Sources */,
 				B28356F1285E2D40009E9604 /* MainTabBarViewController.swift in Sources */,
 				B2835708285E2F3F009E9604 /* DownloadsViewController.swift in Sources */,
 				B28356ED285E2D40009E9604 /* AppDelegate.swift in Sources */,
