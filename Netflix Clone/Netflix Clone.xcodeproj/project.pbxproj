@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B20C224F288DA71800E10E8A /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C224E288DA71800E10E8A /* HeroHeaderUIView.swift */; };
 		B23BB400285EEEF4005172D2 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23BB3FF285EEEF4005172D2 /* CollectionViewTableViewCell.swift */; };
+		B2579F1528944C3600BA0F27 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2579F1428944C3600BA0F27 /* SearchResultsViewController.swift */; };
 		B28356ED285E2D40009E9604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28356EC285E2D40009E9604 /* AppDelegate.swift */; };
 		B28356EF285E2D40009E9604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28356EE285E2D40009E9604 /* SceneDelegate.swift */; };
 		B28356F1285E2D40009E9604 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28356F0285E2D40009E9604 /* MainTabBarViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		B20C224E288DA71800E10E8A /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		B23BB3FF285EEEF4005172D2 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		B2579F1428944C3600BA0F27 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		B28356E9285E2D40009E9604 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28356EC285E2D40009E9604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B28356EE285E2D40009E9604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				B2835703285E2F19009E9604 /* UpcomingViewController.swift */,
 				B2835705285E2F2F009E9604 /* SearchViewController.swift */,
 				B2835707285E2F3F009E9604 /* DownloadsViewController.swift */,
+				B2579F1428944C3600BA0F27 /* SearchResultsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				B29C381A28919ABB000408C6 /* TitleTableViewCell.swift in Sources */,
 				B28356F1285E2D40009E9604 /* MainTabBarViewController.swift in Sources */,
 				B28ABBBB289047C10066BFF0 /* APICaller.swift in Sources */,
+				B2579F1528944C3600BA0F27 /* SearchResultsViewController.swift in Sources */,
 				B20C224F288DA71800E10E8A /* HeroHeaderUIView.swift in Sources */,
 				B2835708285E2F3F009E9604 /* DownloadsViewController.swift in Sources */,
 				B28356ED285E2D40009E9604 /* AppDelegate.swift in Sources */,
