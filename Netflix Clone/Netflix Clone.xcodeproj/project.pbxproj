@@ -21,6 +21,9 @@
 		B2835708285E2F3F009E9604 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2835707285E2F3F009E9604 /* DownloadsViewController.swift */; };
 		B28ABBBB289047C10066BFF0 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28ABBBA289047C10066BFF0 /* APICaller.swift */; };
 		B28ABBBE28904AA60066BFF0 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28ABBBD28904AA60066BFF0 /* Title.swift */; };
+		B29094142895A6680003CE0C /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29094132895A6680003CE0C /* YoutubeSearchResponse.swift */; };
+		B29094162895AC3E0003CE0C /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29094152895AC3E0003CE0C /* TitlePreviewViewController.swift */; };
+		B29094192895B0560003CE0C /* TitlePreviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29094182895B0560003CE0C /* TitlePreviewModel.swift */; };
 		B29C381328918EF3000408C6 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C381228918EF3000408C6 /* TitleCollectionViewCell.swift */; };
 		B29C381628918FF5000408C6 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B29C381528918FF5000408C6 /* SDWebImage */; };
 		B29C381828918FF5000408C6 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B29C381728918FF5000408C6 /* SDWebImageMapKit */; };
@@ -44,6 +47,9 @@
 		B2835707285E2F3F009E9604 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		B28ABBBA289047C10066BFF0 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		B28ABBBD28904AA60066BFF0 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		B29094132895A6680003CE0C /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
+		B29094152895AC3E0003CE0C /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
+		B29094182895B0560003CE0C /* TitlePreviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewModel.swift; sourceTree = "<group>"; };
 		B29C381228918EF3000408C6 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		B29C381928919ABB000408C6 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +74,7 @@
 				B20C224E288DA71800E10E8A /* HeroHeaderUIView.swift */,
 				B29C381228918EF3000408C6 /* TitleCollectionViewCell.swift */,
 				B29C381928919ABB000408C6 /* TitleTableViewCell.swift */,
+				B29094152895AC3E0003CE0C /* TitlePreviewViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				B28ABBBD28904AA60066BFF0 /* Title.swift */,
+				B29094132895A6680003CE0C /* YoutubeSearchResponse.swift */,
+				B29094182895B0560003CE0C /* TitlePreviewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,11 +225,14 @@
 				B28356F1285E2D40009E9604 /* MainTabBarViewController.swift in Sources */,
 				B28ABBBB289047C10066BFF0 /* APICaller.swift in Sources */,
 				B2579F1528944C3600BA0F27 /* SearchResultsViewController.swift in Sources */,
+				B29094142895A6680003CE0C /* YoutubeSearchResponse.swift in Sources */,
+				B29094192895B0560003CE0C /* TitlePreviewModel.swift in Sources */,
 				B20C224F288DA71800E10E8A /* HeroHeaderUIView.swift in Sources */,
 				B2835708285E2F3F009E9604 /* DownloadsViewController.swift in Sources */,
 				B28356ED285E2D40009E9604 /* AppDelegate.swift in Sources */,
 				B28356EF285E2D40009E9604 /* SceneDelegate.swift in Sources */,
 				B2835704285E2F19009E9604 /* UpcomingViewController.swift in Sources */,
+				B29094162895AC3E0003CE0C /* TitlePreviewViewController.swift in Sources */,
 				B29C381328918EF3000408C6 /* TitleCollectionViewCell.swift in Sources */,
 				B28ABBBE28904AA60066BFF0 /* Title.swift in Sources */,
 				B2835702285E2EFD009E9604 /* HomeViewController.swift in Sources */,

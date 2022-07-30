@@ -43,6 +43,10 @@ class HomeViewController: UIViewController {
         let heroView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
         homeFeedTable.tableHeaderView = heroView
         
+        APICaller.shared.getMovie(with: "Stranger Things") { res in
+            
+        }
+        
     }
     
     private func configureNavBar()  {
@@ -67,26 +71,6 @@ class HomeViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
-    }
-    
-    private func getTrendingMovies() {
-        
-    }
-    
-    private func getTrendingTvs() {
-        
-    }
-    
-    private func getUpcomingMovies() {
-        
-    }
-    
-    private func getPopularMovies() {
-        
-    }
-    
-    private func getTopRatedMovies() {
-        
     }
 
 }
