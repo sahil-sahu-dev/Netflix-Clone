@@ -50,7 +50,7 @@ class TitlePreviewViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(overviewLabel)
         view.addSubview(downloadButton)
-        
+        navigationItem.backButtonDisplayMode = .default
         configureConstraints()
     }
     
@@ -59,7 +59,7 @@ class TitlePreviewViewController: UIViewController {
             webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
             webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            webView.heightAnchor.constraint(equalToConstant: 250)
+            webView.heightAnchor.constraint(equalToConstant: 300)
         ]
         
         let titleLabelConstraints = [
@@ -69,7 +69,8 @@ class TitlePreviewViewController: UIViewController {
         
         let overviewLabelConstraints = [
             overviewLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
-            overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+            overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20)
             
         ]
         
@@ -94,7 +95,7 @@ class TitlePreviewViewController: UIViewController {
         self.titleLabel.text = model.title
         self.overviewLabel.text = model.titleOverview
         
-        guard let url = URL(string: "https://www.youtube.com/embedded/\(model.youtubeVideo.id.videoId)") else {return}
+        guard let url = URL(string: "https://www.youtube.com/embed/\(model.youtubeVideo.id.videoId)") else {return}
         
         webView.load(URLRequest(url: url))
     }

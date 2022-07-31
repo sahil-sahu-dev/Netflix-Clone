@@ -74,7 +74,6 @@
 				B20C224E288DA71800E10E8A /* HeroHeaderUIView.swift */,
 				B29C381228918EF3000408C6 /* TitleCollectionViewCell.swift */,
 				B29C381928919ABB000408C6 /* TitleTableViewCell.swift */,
-				B29094152895AC3E0003CE0C /* TitlePreviewViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +113,7 @@
 		B2835700285E2ECD009E9604 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B29094152895AC3E0003CE0C /* TitlePreviewViewController.swift */,
 				B28356F0285E2D40009E9604 /* MainTabBarViewController.swift */,
 				B2835701285E2EFD009E9604 /* HomeViewController.swift */,
 				B2835703285E2F19009E9604 /* UpcomingViewController.swift */,

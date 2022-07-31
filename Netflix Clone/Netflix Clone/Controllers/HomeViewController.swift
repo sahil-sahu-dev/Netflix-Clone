@@ -28,6 +28,10 @@ class HomeViewController: UIViewController {
     
     let sectionTitles = ["Trending Movies", "Popular", "Trending Tv", "Upcoming Movies", "Top Rated"]
     
+    
+    private var headerViewTitle: Title?
+    private var heroView: HeroHeaderUIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,13 +44,23 @@ class HomeViewController: UIViewController {
         
         configureNavBar()
         
-        let heroView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        heroView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
         homeFeedTable.tableHeaderView = heroView
         
-        APICaller.shared.getMovie(with: "Stranger Things") { res in
-            
-        }
+        getRandomHeaderTitle()
         
+    }
+    
+    private func getRandomHeaderTitle() {
+        APICaller.shared.getTrendingTvs { [weak self] result in
+            switch result {
+            case .success(let titles):
+                self?.headerViewTitle = titles.randomElement()
+                self?.heroView?.configure(with: self?.headerViewTitle)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     private func configureNavBar()  {
@@ -89,6 +103,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else{
             return UITableViewCell()
         }
+        
+        cell.delegate = self
         
         switch indexPath.section {
         case Sections.TrendingMovies.rawValue:
@@ -168,6 +184,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = UIColor.white
+
+        
         
     }
     

@@ -39,7 +39,8 @@ class HeroHeaderUIView: UIView {
        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.image = UIImage(named: "heroImage")
+        //imageView.image = UIImage(named: "heroImage")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -72,6 +73,14 @@ class HeroHeaderUIView: UIView {
         
     }
     
+    public func configure(with model: Title?) {
+        guard let model = model else {return}
+        guard let path = model.poster_path else {return}
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(path)") else {return}
+        heroImageView.sd_setImage(with: url)
+        
+    }
+    
     private func applyConstrainsts() {
         
         let playButtonConstraints = [
@@ -86,9 +95,15 @@ class HeroHeaderUIView: UIView {
             downloadButton.widthAnchor.constraint(equalToConstant: 100)
         ]
         
+        let heroImageViewConstraints = [
+            heroImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            heroImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            heroImageView.topAnchor.constraint(equalTo: topAnchor, constant: 26)
+        ]
+        
         NSLayoutConstraint.activate(playButtonConstraints)
         NSLayoutConstraint.activate(downloadButtonConstraints)
-        
+        NSLayoutConstraint.activate(heroImageViewConstraints)
     }
     
     override func layoutSubviews() {

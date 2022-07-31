@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CollectionViewTableViewDelegate: AnyObject {
+    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewModel)
+}
+
 class CollectionViewTableViewCell: UITableViewCell {
+    
+    weak var delegate: CollectionViewTableViewDelegate?
 
     static let identifier = "CollectionViewTableViewCell"
     
@@ -27,7 +33,7 @@ class CollectionViewTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: CollectionViewTableViewCell.identifier)
         
-        contentView.backgroundColor = .systemBrown
+        
         contentView.addSubview(collectionView)
         
         
@@ -77,15 +83,31 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         let title = titles[indexPath.row]
         guard let titleName = title.original_name ?? title.original_title else {return}
         
-        APICaller.shared.getMovie(with: titleName + " trailer") { result in
+        APICaller.shared.getMovie(with: titleName + " trailer") { [weak self] result in
             switch result {
             case .success(let videoElement):
-                print(videoElement)
+                
+                guard let strongSelf = self else {return}
+                
+                self?.delegate?.collectionViewTableViewCellDidTapCell(strongSelf, viewModel: TitlePreviewModel(title: title.original_name ?? title.original_title ?? "Unknown", youtubeVideo: videoElement, titleOverview: title.overview ?? ""))
+            
             case .failure(let error):
                 print(error)
             }
         }
         
                 
+    }
+}
+
+extension HomeViewController: CollectionViewTableViewDelegate {
+    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewModel) {
+        
+        DispatchQueue.main.async { [weak self] in
+            let vc = TitlePreviewViewController()
+            vc.configure(with: viewModel)
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
 }
